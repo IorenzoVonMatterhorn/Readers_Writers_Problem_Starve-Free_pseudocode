@@ -27,6 +27,22 @@ V(Semaphore s)
 
 ```
 
+INITIALIZATION OF SEMAPHORES:
+```
+
+semaphore* rd_mutex;
+
+semaphore* check_mutex; 
+
+semaphore* wrt_mutex;
+
+int cnt = 0; 
+
+```
+
+
+
+
 
 Refrences:
 https://www.geeksforgeeks.org/semaphores-in-process-synchronization/
