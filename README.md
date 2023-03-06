@@ -73,7 +73,26 @@ while(1):
         signal(wrt_mutex)
 
 ```
+WRITERS' END:
+```
+while(1):
+    wait(check_mutex, processId)
+    //  the writer waits for the check mutex first
+    //  it can acquire this mutex even if a reader is already present in critical section as long as if the reader has freed the mutex
 
+    wait(wrt_mutex, processId)
+    // it will wait till the writer process if being blocked by this process
+    //  once free it will acquire the wrt_mutex and enter the critical section
+
+    signal(check_mutex)
+    //  once the writer is ready to enter the critical section, it frees the check_mutex
+    //  this can now be acquired by any reader or writer which came first
+    
+        ` ***** CRITICAL SECTION ***** `
+    signal(wrt_mutex)
+//wrt_mutex is freed back by the writer
+
+```
 
 
 Refrences:
