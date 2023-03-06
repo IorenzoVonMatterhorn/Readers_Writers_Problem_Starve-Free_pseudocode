@@ -72,10 +72,6 @@ while(1):
     if(rd_count == 0)
         signal(wrt_mutex)
 
-
-
-
-
 ```
 
 
