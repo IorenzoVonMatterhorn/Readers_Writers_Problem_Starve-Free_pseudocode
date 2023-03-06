@@ -30,7 +30,7 @@ V(Semaphore s)
 
 ```
 
-# INITIALIZATION OF SEMAPHORES:
+## INITIALIZATION OF SEMAPHORES:
 ```
 
 semaphore* rd_mutex;
