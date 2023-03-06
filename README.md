@@ -97,3 +97,5 @@ while(1):
 
 Refrences:
 https://www.geeksforgeeks.org/semaphores-in-process-synchronization/
+https://arxiv.org/abs/1309.4507
+https://www.os-book.com/OS9/slide-dir/index.html
