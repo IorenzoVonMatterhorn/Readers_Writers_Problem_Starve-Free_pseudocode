@@ -63,7 +63,7 @@ while(1):
     signal(check_mutex)
     //  This check_mutex semaphore can be acquired by either a reader or writer, whichever arrives first
 
-       > ****** CRITICAL SECTION ******
+` ****** CRITICAL SECTION ******`
 
     wait(rd_mutex, pid)
     --cnt
