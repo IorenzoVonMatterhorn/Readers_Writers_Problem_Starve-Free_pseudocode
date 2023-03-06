@@ -98,7 +98,16 @@ while(1):
 
 # Evaluating the Solution based on various criteria:
 
+## Mutual Exclusion:
+  only a single writer process or multiple reader processes and no writer processes might be present in the critical section at the same moment for Mutual Exclusion to hold. It is ensured by the check_mutex semaphore which is not biased either to the reader or the writer processes and treats them equally. Entry in the process is decided on a First Come First Serve basis. Entry is given to a writer only when the critical section is free and to readers additionally when other readers are present. Thus, mutual exclusion is satisfied.
 
+## Progress:
+This pseudo-code has left no loophole in its implementation to allow a deadlock to occur. Also, the readers and writers take finite time with semaphores being released, every time processes are done with their execution in the critical section, giving chance for others to enter the critical section. Thus, the progress criterion is satisfied.
+
+## Bounded Waiting:
+Originally if readers came one after another, writers would starve, but now due to the entry_mutex semaphore, all get queued up and are released one after the other. Same is the case of the readers, that get a chance to enter the crtical section in a group whenever they reach the front of the queue. Thus, neither reader nor writer processes have to wait indefinitely, satisfying the bounded waiting criteria.
+
+Since, all of the requirements are properly met, we can simply conlude that the solution in completely starve-free!
 
 
 
